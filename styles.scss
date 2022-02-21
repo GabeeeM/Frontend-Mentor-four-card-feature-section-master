@@ -1,0 +1,164 @@
+$red: hsl(0, 78%, 62%);
+$cyan: hsl(180, 62%, 55%);
+$orange: hsl(34, 97%, 64%);
+$blue: hsl(212, 86%, 64%);
+$vDarkBlue: hsl(234, 12%, 34%);
+$grayBlue: hsl(229, 6%, 66%);
+$vLightGray: hsl(0, 0%, 98%);
+
+body {
+    margin: 0px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    background-color: $vLightGray;
+
+    .top {
+        margin-top: 2em;
+        margin-bottom: 2em;
+
+        h1 {
+            font-weight: lighter;
+            margin-bottom: -0.5em;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+
+        p {
+            margin-left: 32em;
+            margin-right: 32em;
+            color: $grayBlue;
+        }
+    }
+
+    .meat {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        column-gap: 1em;
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            background-color: white;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            width: 21.88em;
+            height: 15.63em;
+            
+            .text {
+                margin-left: 1em;
+
+                p {
+                    color: $grayBlue;
+                }
+            }
+
+            .image {
+                text-align: right;
+                margin-right: 2em;
+
+                img {
+                    height: 4em;
+                    width: 4em;
+                }
+            }
+        }
+
+        .left {
+            .card {
+                margin-top: 50%;
+            }
+
+            .topBar {
+                height: 5px;
+                text-align: center;
+                background-color: $cyan;
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+            }
+        }
+
+        .middle {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            row-gap: 1.1em;
+
+            .topBar1 {
+                height: 5px;
+                text-align: center;
+                background-color: $red;
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+            }
+
+            .topBar2 {
+                height: 5px;
+                text-align: center;
+                background-color: $orange;
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+            }
+        }
+
+        .right {
+            .card {
+                margin-top: 50%;
+            }
+
+            .topBar {
+                height: 5px;
+                text-align: center;
+                background-color: $blue;
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+            }
+        }
+    }
+    @media screen and (max-width: 768px)  {
+        html {
+            font-size: 150px;
+        }
+
+        .top {
+            margin-top: 0%;
+            p {
+                margin-left: 5%;
+                margin-right: 5%;
+            }
+        }
+
+        .meat {
+            flex-direction: column;
+
+            .card {
+                width: 95%;
+            }
+
+            .left {
+                .card {
+                    margin-top: 0%;
+                }
+            }
+
+            .right {
+                row-gap: 0em;
+                column-gap: 0em;
+
+                .card {
+                    margin-top: 0%;
+                }
+            }
+        }
+    }
+}
